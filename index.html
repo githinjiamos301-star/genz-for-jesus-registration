@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b3158">
+  <title>GENZ FOR JESUS Youth Summit — Registration</title>
+  <style>
+    :root{
+      --navy:#0b3158;
+      --gold:#d8a21b;
+      --light:#f5f7fa;
+      --text:#17212b;
+      --muted:#667085;
+      --white:#ffffff;
+      --border:#d9e0e7;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(135deg,#eef3f8,#ffffff);
+      color:var(--text);
+    }
+    .page{min-height:100vh;padding:24px 14px 40px}
+    .card{
+      max-width:620px;margin:auto;background:var(--white);
+      border-radius:22px;overflow:hidden;
+      box-shadow:0 12px 40px rgba(11,49,88,.12);
+    }
+    .hero{
+      background:var(--navy);color:#fff;text-align:center;padding:28px 20px 24px;
+      border-bottom:5px solid var(--gold);
+    }
+    .logo{
+      width:135px;height:135px;object-fit:contain;background:#fff;border-radius:50%;
+      padding:8px;margin-bottom:12px;
+    }
+    h1{margin:4px 0 7px;font-size:27px;letter-spacing:.3px}
+    .subtitle{margin:0;color:#f3f6fa;font-size:15px;line-height:1.5}
+    .gold{color:#f0bb2d;font-weight:700}
+    .content{padding:24px 20px 28px}
+    .notice{
+      background:#fff8e5;border-left:4px solid var(--gold);
+      padding:13px 14px;border-radius:10px;margin-bottom:20px;
+      font-size:14px;line-height:1.5;
+    }
+    .event{
+      text-align:center;margin:0 0 20px;font-size:14px;color:var(--muted);
+    }
+    form{display:grid;gap:16px}
+    label{font-weight:700;font-size:14px;display:block;margin-bottom:7px}
+    input,select{
+      width:100%;padding:14px 13px;border:1px solid var(--border);
+      border-radius:10px;font-size:16px;outline:none;background:#fff;
+    }
+    input:focus,select:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(11,49,88,.08)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    button{
+      border:0;border-radius:11px;background:var(--navy);color:#fff;
+      padding:15px 18px;font-size:16px;font-weight:700;cursor:pointer;
+      margin-top:3px;
+    }
+    button:hover{filter:brightness(1.08)}
+    button:disabled{opacity:.65;cursor:not-allowed}
+    .small{font-size:12px;color:var(--muted);line-height:1.45}
+    .success{
+      display:none;text-align:center;padding:22px 14px;background:#eef9f1;
+      border:1px solid #b7dfc1;border-radius:13px;color:#174d28;
+    }
+    .success h2{margin:0 0 8px;font-size:22px}
+    .success p{margin:5px 0;line-height:1.5}
+    .regid{font-weight:800;color:var(--navy)}
+    .footer{text-align:center;margin-top:20px;font-size:12px;color:var(--muted)}
+    @media(max-width:520px){
+      .page{padding:10px 8px 28px}
+      .card{border-radius:16px}
+      .hero{padding:23px 14px 20px}
+      h1{font-size:23px}
+      .grid{grid-template-columns:1fr}
+      .content{padding:20px 15px 24px}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <main class="card">
+    <header class="hero">
+      <img src="logo.png" alt="Chosen Generation Youth Fellowship logo" class="logo">
+      <h1>GENZ FOR JESUS YOUTH SUMMIT</h1>
+      <p class="subtitle"><span class="gold">3–4 December 2026</span><br>Pisgah Heights School, Maai Mahiu Town</p>
+    </header>
+
+    <section class="content">
+      <div class="notice">
+        <strong>Register for the summit</strong><br>
+        Please enter your details accurately. Your phone number is used to help prevent duplicate registrations.
+      </div>
+
+      <p class="event">Hosted by <strong>Chosen Generation Youth Fellowship</strong></p>
+
+      <form id="registrationForm">
+        <div>
+          <label for="fullName">Full Name *</label>
+          <input id="fullName" name="fullName" type="text" autocomplete="name" required placeholder="Enter your full name">
+        </div>
+
+        <div>
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                 required placeholder="e.g. 0712345678" pattern="[0-9 +()-]{9,20}">
+        </div>
+
+        <div>
+          <label for="church">Church *</label>
+          <input id="church" name="church" type="text" required placeholder="Enter your church">
+        </div>
+
+        <div class="grid">
+          <div>
+            <label for="age">Age *</label>
+            <input id="age" name="age" type="number" min="10" max="100" required placeholder="Age">
+          </div>
+          <div>
+            <label for="gender">Gender *</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="town">Town *</label>
+          <input id="town" name="town" type="text" required placeholder="e.g. Maai Mahiu">
+        </div>
+
+        <button id="submitBtn" type="submit">REGISTER FOR THE SUMMIT</button>
+        <p class="small">By submitting this form, you confirm that the information provided is accurate.</p>
+      </form>
+
+      <div id="successBox" class="success">
+        <h2>Registration Submitted ✓</h2>
+        <p>Thank you for registering for the <strong>GENZ FOR JESUS Youth Summit</strong>.</p>
+        <p>Your registration ID is <span id="registrationId" class="regid"></span></p>
+        <p>Keep this ID for your records.</p>
+      </div>
+
+      <div class="footer">Chosen Generation Youth Fellowship • GENZ FOR JESUS</div>
+    </section>
+  </main>
+</div>
+
+<script>
+  // IMPORTANT:
+  // Replace this with the Google Apps Script Web App URL after deployment.
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyaw9__yUVkl30ECAgPUHtqtS9AjGM6XhmZhH-sDjHJTVTaZ__X3WH4u6dVCYLwuJe7/exec";
+
+  const form = document.getElementById("registrationForm");
+  const button = document.getElementById("submitBtn");
+  const successBox = document.getElementById("successBox");
+  const registrationId = document.getElementById("registrationId");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (GOOGLE_SCRIPT_URL.includes("PASTE_YOUR")) {
+      alert("The registration page is ready, but the Google Sheets connection URL has not been added yet.");
+      return;
+    }
+
+    button.disabled = true;
+    button.textContent = "Submitting...";
+
+    const data = new FormData(form);
+    const id = "GJ-" + Date.now().toString(36).toUpperCase() + "-" +
+               Math.floor(100 + Math.random() * 900);
+
+    data.append("registrationId", id);
+    data.append("source", "GENZ FOR JESUS QR Registration");
+
+    try {
+      // no-cors is intentional: Google Apps Script accepts the submitted form,
+      // while the browser does not need to read the cross-origin response.
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: data
+      });
+
+      form.style.display = "none";
+      successBox.style.display = "block";
+      registrationId.textContent = id;
+      window.scrollTo({top: 0, behavior: "smooth"});
+    } catch (error) {
+      console.error(error);
+      alert("The registration could not be submitted. Please check your internet connection and try again.");
+      button.disabled = false;
+      button.textContent = "REGISTER FOR THE SUMMIT";
+    }
+  });
+</script>
+</body>
+</html>
